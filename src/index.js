@@ -5,7 +5,8 @@ const Greeting = () => {
   return (
     <>
       <div>
-        <div>
+        <div className="manig-hog">
+          {/* this is rendered in the browser as a class because the camel casing helps decode react the classnames amd class */}
           <h3>hello world</h3>
           <ul>
             <li>
