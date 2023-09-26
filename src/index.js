@@ -1,31 +1,33 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 
-const Greeting = () => {
+import './style.css'
+
+const BookList = () => {
   return (
-    <>
-      <div>
-        <div className="manig-hog">
-          {/* this is rendered in the browser as a class because the camel casing helps decode react the classnames amd class */}
-          <h3>hello world</h3>
-          <ul>
-            <li>
-              <a href="#">dancing dogs</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <h1>
-        <p>party karenge</p>
-      </h1>
-    </>
-    // we can use this type of React.Frgament to enclose or just go with plain old '<></>' type of styling
+    <section className="booklist">
+      <Book />
+      <Book />
+      <Book />
+      <Book />
+    </section>
   )
 }
-// function Greeting() {
-//   return React.createElement('h2', {}, 'hello world')
-// }
-
+const author = 'James XClear'
+const Book = () => {
+  const title = 'Atomic Habits'
+  return (
+    <article className="book">
+      <img
+        // className="book"
+        src="https://m.media-amazon.com/images/I/91bYsX41DVL._SL1500_.jpg"
+        alt="Atomic Habits"
+      />
+      <h2>{title}</h2>
+      <h4>{author}</h4>
+    </article>
+  )
+}
 const root = ReactDOM.createRoot(document.getElementById('root'))
 
-root.render(<Greeting />)
+root.render(<BookList />)
