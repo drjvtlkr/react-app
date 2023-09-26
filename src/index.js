@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client'
 
 const Greeting = () => {
   return (
-    <React.Fragment>
+    <>
       <div>
         <div>
           <h3>hello world</h3>
@@ -17,7 +17,7 @@ const Greeting = () => {
       <h1>
         <p>party karenge</p>
       </h1>
-    </React.Fragment>
+    </>
     // we can use this type of React.Frgament to enclose or just go with plain old '<></>' type of styling
   )
 }
